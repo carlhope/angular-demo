@@ -1,0 +1,18 @@
+<div class="widget-container">
+  <h2>{{ title }}</h2>
+
+  <div class="counter">
+    <button (click)="decrement()">−</button>
+    <span>{{ count }}</span>
+    <button (click)="increment()">+</button>
+  </div>
+
+  <p>Current theme: {{ config.theme }}</p>
+  @if(config.showHeader)
+  {<p>Header is visible</p>}
+  @else {
+    <p>Header is not visible</p>
+  }
+
+</div>
+
