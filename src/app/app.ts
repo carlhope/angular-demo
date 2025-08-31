@@ -10,4 +10,5 @@ import { MyWidget } from "./my-widget/my-widget";
 })
 export class App {
   protected readonly title = signal('angular-demo');
+  messageForSecond = 'Message from AppComponent to second, via first';
 }

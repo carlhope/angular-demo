@@ -9,10 +9,11 @@ import {
   SimpleChanges
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Second } from "../second/second";
 
 @Component({
   selector: 'app-my-widget',
-  imports: [CommonModule],
+  imports: [CommonModule, Second],
   templateUrl: './my-widget.html',
   styleUrls: ['./my-widget.css']
 })
@@ -20,6 +21,8 @@ export class MyWidget implements OnInit, OnChanges, DoCheck, AfterViewInit, OnDe
   @Input() title: string = '';
   @Input() count: number = 0;
   @Input() config: { theme: string; showHeader: boolean } = { theme: 'light', showHeader: true };
+  messageForSecond:string = 'Hello from FirstComponent!';
+  @Input() messageFromApp: string = ""; //pass on to second
 
   constructor() {
     console.log('Constructor: MyWidget instance created');
