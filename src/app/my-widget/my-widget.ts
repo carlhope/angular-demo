@@ -57,6 +57,10 @@ export class MyWidget implements OnInit, OnChanges, DoCheck, AfterViewInit, OnDe
     this.count--;
     console.log('Decremented count:', this.count);
   }
+  handleReplyFromSecond(replyMessage: string): void {
+  console.log('Received reply from SecondComponent:', replyMessage);
+}
+
 }
 
 

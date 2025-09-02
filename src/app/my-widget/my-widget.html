@@ -13,7 +13,7 @@
   @else {
     <p>Header is not visible</p>
   }
-  <app-second [message]="messageForSecond" [messageFromApp]="messageFromApp"></app-second>
+  <app-second [message]="messageForSecond" [messageFromApp]="messageFromApp" (reply)="handleReplyFromSecond($event)"></app-second>
 
 </div>
 
