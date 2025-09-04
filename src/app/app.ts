@@ -4,11 +4,11 @@ import { MyWidget } from "./my-widget/my-widget";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MyWidget],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('angular-demo');
-  messageForSecond = 'Message from AppComponent to second, via first';
+  
 }
