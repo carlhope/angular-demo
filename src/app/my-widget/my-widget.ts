@@ -30,6 +30,9 @@ export class MyWidget implements OnInit, OnChanges, DoCheck, AfterViewInit, OnDe
 
   ngOnInit(): void {
     console.log('ngOnInit: Component initialized');
+    const saved = window.localStorage.getItem('count');
+    if (saved) this.count = JSON.parse(saved);
+    else this.count = 27;
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -45,6 +48,8 @@ export class MyWidget implements OnInit, OnChanges, DoCheck, AfterViewInit, OnDe
   }
 
   ngOnDestroy(): void {
+    console.log('count on destroy', this.count);
+    window.localStorage.setItem('count', JSON.stringify(this.count));
     console.log('ngOnDestroy: Component is about to be destroyed');
   }
 

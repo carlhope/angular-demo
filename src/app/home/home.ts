@@ -10,5 +10,13 @@ import { MyWidget } from '../my-widget/my-widget';
 })
 export class Home {
   messageForSecond = 'Message from AppComponent to second, via first';
+  count!:number;
+
+  ngOnInit():void{
+
+  }
+  ngOnDestroy():void{
+    
+  }
 
 }
